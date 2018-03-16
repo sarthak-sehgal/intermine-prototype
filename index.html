@@ -1,47 +1,48 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Prototype for Cross-InterMine search tool</title>
-<style>
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-html, body {
-        background: #efefef;
-        display: flex;     
-	height: 100%;
-        width: 100%;
-        flex-direction: column;
-        font-family: 'Roboto', sans-serif;
-        align-items: center;
-        justify-content: center;
-}
-#container {
-        width: 60%;
-}
-h1 {
-        text-align: center;
-}
-.center {
-        text-align: center;
-}
-.footer {
-        color: rgba(0,0,0,0.7);
-}
-</style>
+	<title>Prototype - Cross-InterMine Search Tool</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./styles/mdl/material.min.css"></style>
+	<script type="text/javascript" src="./scripts/mdl/material.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="./styles/home-style.css">
 </head>
 <body>
-<div id="container">
-<h1>Prototype - Cross-InterMine search tool</h1>
-<p class="center">Under construction</p>
-<p>Targets to be achieved:</p>
-<ul>
-<li>UI of the screens as per design mockups in proposal</li>
-<li>Search bar in the landing page enabling users to search amongst a few mines</li>
-<li>API call to two or more mines for a search query</li>
-<li>Top results page for a search query</li>
-<li>Add-on if time permits: Recent searches</li>
-</ul>
-<br>
-<p class="footer center">Sarthak Sehgal | GSoC 2018</p>
-</div>
+	<div id="container">
+		<div style="display: flex;justify-content: center;align-items: center; flex-direction: column; margin-top: auto; margin-bottom: auto;">
+			<img id="logo" src="./media/logo.png">
+			<br>
+			<input type="text" name="search" id="searchbar" placeholder="Search mines..." autofocus />
+			<ul class="demo-list-control mdl-list">
+				<span style="font-size: 1.5em;">Select mines:</span>
+				<li class="mdl-list__item mineList">
+					<span class="mdl-list__item-primary-content">
+						FlyMine
+					</span>
+					<span class="mdl-list__item-secondary-action">
+						<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-1">
+							<input type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input" checked />
+			      		</label>
+			    	</span>
+			    	<li class="mdl-list__item mineList">
+					<span class="mdl-list__item-primary-content">
+						ModMine
+					</span>
+					<span class="mdl-list__item-secondary-action">
+						<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-2">
+							<input type="checkbox" id="list-checkbox-2" class="mdl-checkbox__input" checked />
+			      		</label>
+			    	</span>
+				</li>
+			</ul>
+		</div>
+		<div class="bottomNav">
+			<span>About</span>
+			<span>Documentation</span>
+			<span>Help</span>
+		</div>
+	</div>
+		<img id="tree" src="./media/tree.svg" />
 </body>
 </html>
-

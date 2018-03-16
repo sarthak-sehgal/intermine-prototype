@@ -66,6 +66,9 @@ html, body {
 .bottomNav span:last-child {
 	padding-right: 0;
 }
+.bottomNav span:hover {
+	text-decoration: underline;
+}
 .mineList {
 	z-index: 999;
 	padding: 0;

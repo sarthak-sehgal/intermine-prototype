@@ -77,3 +77,19 @@ html, body {
 .mineList * {
 	z-index: 999;
 }
+@media all and (max-device-width: 800px) and (min-device-width: 480px){
+	#logo {
+		width: 50vw;
+	}
+	#searchbar {
+		width: 50vw;
+	}
+}
+@media all and (max-device-width: 480px){
+	#logo {
+		width: 60vw;
+	}
+	#searchbar {
+		width: 60vw;
+	}
+}

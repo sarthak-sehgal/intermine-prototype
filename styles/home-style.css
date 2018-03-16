@@ -66,6 +66,9 @@ html, body {
 .bottomNav span:last-child {
 	padding-right: 0;
 }
+.bottomNav span:hover {
+	text-decoration: underline;
+}
 .mineList {
 	z-index: 999;
 	padding: 0;
@@ -73,92 +76,4 @@ html, body {
 }
 .mineList * {
 	z-index: 999;
-}
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-	#tree {
-		position: absolute;
-		height: 300px;
-		left: 50%;
-		bottom: -30px;
-		transform: translateX(-50%);
-		opacity: 0.8;
-	}
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-	#tree {
-		position: absolute;
-		height: 300px;
-		bottom: -50px;
-		right: -100px;
-		opacity: 0.8;
-	}
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-	#tree {
-		position: absolute;
-		height: 300px;
-		left: 50%;
-		bottom: -30px;
-		transform: translateX(-50%);
-		opacity: 0.8;
-	}
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 480px) and (max-device-width : 1224px) {
-	#tree {
-		position: absolute;
-		height: 500px;
-		bottom: -50px;
-		right: -100px;
-		opacity: 0.8;
-	}
-}
-
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 480px) and (max-device-width : 1224px) and (orientation : landscape) {
-	#tree {
-		position: absolute;
-		height: 500px;
-		bottom: -50px;
-		right: -100px;
-		opacity: 0.8;
-	}
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 480px) and (max-device-width : 1224px) and (orientation : portrait) {
-	#tree {
-		position: absolute;
-		height: 500px;
-		bottom: -50px;
-		right: -100px;
-		opacity: 0.8;
-	}
-}
-
-@media only screen  and (min-width : 1224px) {
-	#tree {
-		position: absolute;
-		height: 500px;
-		bottom: -50px;
-		right: -100px;
-		opacity: 0.8;
-	}
-}
-
-/* Large screens ----------- */
-@media only screen  and (min-width : 1824px) {
-	#tree {
-		position: absolute;
-		height: 800px;
-		bottom: -50px;
-		right: -100px;
-		opacity: 0.8;
-	}
 }

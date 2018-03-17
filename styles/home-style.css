@@ -80,6 +80,22 @@ html, body {
 .searchButton {
 	display: inline-block;
 }
+#recent_searches {
+	display: none; 
+	flex-direction: column; 
+	padding: 0; 
+	margin: 0; 
+	position: absolute; 
+	top:20px; 
+	right: 20px;
+}
+#recent_searches {
+	display: none;
+	-webkit-transition: 1s all ease-in-out;
+	-moz-transition: 0.2s all ease-in-out;
+	-o-transition: 0.2s all ease-in-out;
+	transition: 0.2s all ease-in-out;
+}
 @media all and (max-device-width: 800px) and (min-device-width: 480px){
 	#logo {
 		width: 50vw;

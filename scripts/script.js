@@ -6,13 +6,24 @@ function init()
 	chomine_check = document.getElementsByClassName("chomine")[0];
 	searchButton.addEventListener("click", search);
 	searchBar.addEventListener("keyup", search);
-
+	var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	var height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 	/*function isTouchDevice() {
 	    return 'ontouchstart' in document.documentElement;
 	}
 	if (isTouchDevice()) {
     	document.getElementsByClassName("searchButton")[0].style.display = 'inline-block';
 	}*/
+
+	queries = localStorage.getItem("queries");
+	if ((queries && width>600 && height>width) || (queries && width>height && height>600)) {
+		document.getElementById("recent_searches").style.display = 'flex';
+	    queries = JSON.parse(queries);
+	    for(i=0; i<queries.length; i++)
+	    {
+			document.getElementById("recent_list").innerHTML += '<span style="display: block; padding: 0; margin: 0" class="mdl-chip__text">'+queries[i]+'</span>';
+	    }
+	}
 
 	function search(e) {
 		if(e.keyCode==13)

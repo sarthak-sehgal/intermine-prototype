@@ -22,3 +22,11 @@ html, body {
 .mdl-layout.is-upgraded .mdl-layout__tab.is-active::after {
 	background: rgb(66,66,66);
 }
+table td {
+	max-width: 200px; 
+	white-space: -o-pre-wrap;	
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+}

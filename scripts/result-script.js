@@ -1,28 +1,28 @@
 function inti()
 {
-	flymine_check = localStorage.getItem("flymine_check");
+	beanmine_check = localStorage.getItem("beanmine_check");
 	chomine_check = localStorage.getItem("chomine_check");
 	queries = JSON.parse(localStorage.getItem("queries"));
 
-	if(flymine_check=="false")
+	if(beanmine_check=="false")
 	{
-		document.getElementById("flymine_tab").style.display = "none";
-		document.getElementsByClassName("flymine_section")[0].style.display = "none";
+		document.getElementById("beanmine_tab").style.display = "none";
+		document.getElementsByClassName("beanmine_section")[0].style.display = "none";
 		document.getElementById("chomine_tab").classList += " is-active";
 		document.getElementsByClassName("chomine_section")[0].classList += " is-active";
 	}
 	else
 	{
-		$.getJSON( "http://www.flymine.org/flymine/service/search?q="+queries[queries.length-1], function( data ) {
-			render("flymine", data);
+		$.getJSON( "https://mines.legumeinfo.org/beanmine/service/search?q="+queries[queries.length-1], function( data ) {
+			render("beanmine", data);
 		});
 	}
 	if(chomine_check=="false")
 	{
 		document.getElementById("chomine_tab").style.display = "none";
 		document.getElementsByClassName("chomine_section")[0].style.display = "none";
-		document.getElementById("flymine_tab").classList += " is-active";
-		document.getElementsByClassName("flymine_section")[0].classList += " is-active";
+		document.getElementById("beanmine_tab").classList += " is-active";
+		document.getElementsByClassName("beanmine_section")[0].classList += " is-active";
 	}
 	else
 	{
@@ -50,6 +50,12 @@ function inti()
 					if(v.fields.title==undefined)
 					{
 						name = v.fields.name;
+						if(v.fields.name==undefined)
+						{
+							name = v.fields.experimentTraitName;
+							if(name==undefined)
+								name="";
+						}
 					}
 				}
 			}

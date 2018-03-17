@@ -2,7 +2,7 @@ function init()
 {
 	searchBar = document.getElementById("searchbar");
 	searchButton = document.getElementById("searchButton");
-	flymine_check = document.getElementsByClassName("flymine")[0];
+	beanmine_check = document.getElementsByClassName("beanmine")[0];
 	chomine_check = document.getElementsByClassName("chomine")[0];
 	searchButton.addEventListener("click", search);
 	searchBar.addEventListener("keyup", search);
@@ -48,7 +48,7 @@ function init()
 					localStorage.setItem("queries", JSON.stringify(queries));
 					queries = localStorage.getItem("queries");
 				}
-				localStorage.setItem("flymine_check", flymine_check.checked);
+				localStorage.setItem("beanmine_check", beanmine_check.checked);
 				localStorage.setItem("chomine_check", chomine_check.checked);
 				window.location.href = "./result.html";
 			}

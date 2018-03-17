@@ -1,0 +1,24 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	background: #F7F7F7;
+	font-family: 'Roboto', sans-serif;
+	overflow: hidden;
+}
+#container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 999;
+}
+#container * {
+	z-index: 999;
+}
+.mdl-layout.is-upgraded .mdl-layout__tab.is-active::after {
+	background: rgb(66,66,66);
+}

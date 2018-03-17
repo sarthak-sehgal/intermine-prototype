@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search results</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./styles/mdl/material.min.css"></style>
+	<script type="text/javascript" src="./scripts/mdl/material.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="./styles/result-style.css">
+</head>
+<body>
+	<!-- Simple header with scrollable tabs. -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	  <header class="mdl-layout__header">
+	    <div class="mdl-layout__header-row">
+	      <!-- Title -->
+	      <span class="mdl-layout-title">InterMine</span>
+	    </div>
+	    <!-- Tabs -->
+	    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+	      <a href="#scroll-tab-1" class="mdl-layout__tab is-active">FLYMINE</a>
+	      <a href="#scroll-tab-2" class="mdl-layout__tab">MODMINE</a>
+	    </div>
+	  </header>
+	  <div class="mdl-layout__drawer">
+	    <span class="mdl-layout-title">Home</span>
+	    <span class="mdl-layout-title">About</span>
+	    <span class="mdl-layout-title">Documentation</span>
+	  </div>
+	  <main class="mdl-layout__content">
+	    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+	      <div class="page-content">
+	      	<div id="container">
+	      		<div style="width: 90%; display: flex; align-items: center;">
+		      		<h3 style="margin-right: auto">FLYMINE</h3>
+	    			<form action="#">
+					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					    <input class="mdl-textfield__input" type="text" id="sample3">
+					    <label class="mdl-textfield__label" for="sample3">Search FLYMINE</label>
+					  </div>
+					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					    <input class="mdl-textfield__input" type="text" id="sample3">
+					    <label class="mdl-textfield__label" for="sample3">Search all mines</label>
+					  </div>
+					</form>  			
+	      		</div>
+	      		<table style="width: 90%" class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
+				  <thead>
+				  <tr>
+				  	<th style="text-align: left; padding-bottom: 0; margin-bottom: 0; color: #000"><h4 style="padding-bottom: 0; margin-bottom: 0;">Search results for: <span style="color: rgba(0,0,0,.54)"></span></h4></th>
+				  	<th></th>
+				  	<th></th>
+				  	<th></th>
+				  </tr>
+				  </thead>
+				  <thead>
+				    <tr>
+				      <th class="mdl-data-table__cell--non-numeric">Type</th>
+				      <th class="mdl-data-table__cell--non-numeric">Name</th>
+				      <th class="mdl-data-table__cell--non-numeric">Details</th>
+				      <th class="mdl-data-table__cell--non-numeric">Score</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td class="mdl-data-table__cell--non-numeric">Placeholder text</td>
+				      <td class="mdl-data-table__cell--non-numeric">Placeholder text</td>
+				      <td class="mdl-data-table__cell--non-numeric">Placeholder text</td>
+				      <td class="mdl-data-table__cell--non-numeric">Placeholder text</td>
+				    </tr>
+				    <tr>
+				      <td class="mdl-data-table__cell--non-numeric">Placeholder text</td>
+				      <td class="mdl-data-table__cell--non-numeric">Placeholder text</td>
+				      <td class="mdl-data-table__cell--non-numeric">Placeholder text</td>
+				      <td class="mdl-data-table__cell--non-numeric">Placeholder text</td>
+				    </tr>
+				    <tr>
+				      <td class="mdl-data-table__cell--non-numeric">Placeholder text</td>
+				      <td class="mdl-data-table__cell--non-numeric">Placeholder text</td>
+				      <td class="mdl-data-table__cell--non-numeric">Placeholder text</td>
+				      <td class="mdl-data-table__cell--non-numeric">Placeholder text</td>
+				    </tr>
+				  </tbody>
+				</table>
+	      	</div>
+	      </div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+	      <div class="page-content">xyz</div>
+	    </section>
+	  </main>
+	</div>
+	<div id="container">
+		
+	</div>
+	<script type="text/javascript" src="./scripts/flymine-script.js"></script>
+</body>
+</html>

@@ -2,6 +2,8 @@ function init()
 {
 	searchBar = document.getElementById("searchbar");
 	searchButton = document.getElementById("searchButton");
+	flymine_check = document.getElementsByClassName("flymine")[0];
+	modmine_check = document.getElementsByClassName("modmine")[0];
 	searchButton.addEventListener("click", search);
 	searchBar.addEventListener("keyup", search);
 
@@ -46,7 +48,8 @@ function init()
 					localStorage.setItem("queries", JSON.stringify(queries));
 					queries = localStorage.getItem("queries");
 				}
-				console.log(queries);
+				localStorage.setItem("flymine_check", flymine_check.checked);
+				localStorage.setItem("modmine_check", modmine_check.checked);
 			}
 		}
 		function isEmpty(str){

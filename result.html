@@ -4,9 +4,10 @@
 	<title>Search results</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./styles/mdl/material.min.css"></style>
-	<script type="text/javascript" src="./scripts/mdl/material.min.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" type="text/css" href="./styles/result-style.css">
+	<script type="text/javascript" src="./scripts/mdl/material.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 	<!-- Simple header with scrollable tabs. -->
@@ -18,8 +19,8 @@
 	    </div>
 	    <!-- Tabs -->
 	    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-	      <a href="#scroll-tab-1" class="mdl-layout__tab is-active">FLYMINE</a>
-	      <a href="#scroll-tab-2" class="mdl-layout__tab">MODMINE</a>
+	      <a href="#scroll-tab-1" class="mdl-layout__tab is-active" id="flymine_tab">FLYMINE</a>
+	      <a href="#scroll-tab-2" class="mdl-layout__tab" id="chomine_tab">CHOMINE</a>
 	    </div>
 	  </header>
 	  <div class="mdl-layout__drawer">
@@ -28,17 +29,17 @@
 	    <span class="mdl-layout-title">Documentation</span>
 	  </div>
 	  <main class="mdl-layout__content">
-	    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+	    <section class="mdl-layout__tab-panel is-active flymine_section" id="scroll-tab-1">
 	      <div class="page-content">
 	      	<div id="container">
 	      		<div style="width: 90%; display: flex; align-items: center;">
 		      		<h3 style="margin-right: auto">FLYMINE</h3>
 	    			<form action="#">
-					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 200px">
 					    <input class="mdl-textfield__input" type="text" id="sample3">
 					    <label class="mdl-textfield__label" for="sample3">Search FLYMINE</label>
 					  </div>
-					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 200px">
 					    <input class="mdl-textfield__input" type="text" id="sample3">
 					    <label class="mdl-textfield__label" for="sample3">Search all mines</label>
 					  </div>
@@ -85,7 +86,7 @@
 	      	</div>
 	      </div>
 	    </section>
-	    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+	    <section class="mdl-layout__tab-panel chomine_section" id="scroll-tab-2">
 	      <div class="page-content">xyz</div>
 	    </section>
 	  </main>
@@ -93,6 +94,6 @@
 	<div id="container">
 		
 	</div>
-	<script type="text/javascript" src="./scripts/flymine-script.js"></script>
+	<script type="text/javascript" src="./scripts/result-script.js"></script>
 </body>
 </html>

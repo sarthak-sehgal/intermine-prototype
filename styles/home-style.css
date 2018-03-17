@@ -78,7 +78,7 @@ html, body {
 	z-index: 999;
 }
 .searchButton {
-	display: none;
+	display: inline-block;
 }
 @media all and (max-device-width: 800px) and (min-device-width: 480px){
 	#logo {

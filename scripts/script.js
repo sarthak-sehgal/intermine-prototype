@@ -25,32 +25,39 @@ function init()
 		}
 		function doSearch()
 		{
-			if(searchBar.value != null && searchBar.value!=undefined && searchBar.value!="" && !isEmpty(searchBar.value))
+			if(!(beanmine_check.checked || chomine_check.checked))
 			{
-				queries = localStorage.getItem("queries");
-				if (queries) {
-				    queries = JSON.parse(queries);
-				    if(queries.length<3)
-				    {
-				    	queries.push(searchBar.value);
-				    }
-				    else
-				    {
-				    	queries.push(searchBar.value);
-				    	queries.splice(0,1);
-				    }
-					localStorage.setItem("queries", JSON.stringify(queries));
-				}
-				else
+				alert("Please select a mine!");
+			}
+			else
+			{
+				if(searchBar.value != null && searchBar.value!=undefined && searchBar.value!="" && !isEmpty(searchBar.value))
 				{
-					queries = new Array();
-					queries.push(searchBar.value);
-					localStorage.setItem("queries", JSON.stringify(queries));
 					queries = localStorage.getItem("queries");
-				}
-				localStorage.setItem("beanmine_check", beanmine_check.checked);
-				localStorage.setItem("chomine_check", chomine_check.checked);
-				window.location.href = "./result.html";
+					if (queries) {
+					    queries = JSON.parse(queries);
+					    if(queries.length<3)
+					    {
+					    	queries.push(searchBar.value);
+					    }
+					    else
+					    {
+					    	queries.push(searchBar.value);
+					    	queries.splice(0,1);
+					    }
+						localStorage.setItem("queries", JSON.stringify(queries));
+					}
+					else
+					{
+						queries = new Array();
+						queries.push(searchBar.value);
+						localStorage.setItem("queries", JSON.stringify(queries));
+						queries = localStorage.getItem("queries");
+					}
+					localStorage.setItem("beanmine_check", beanmine_check.checked);
+					localStorage.setItem("chomine_check", chomine_check.checked);
+					window.location.href = "./result.html";
+				}	
 			}
 		}
 		function isEmpty(str){

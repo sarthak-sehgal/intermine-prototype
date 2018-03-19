@@ -1,5 +1,6 @@
 function inti()
 {
+	top_boxes = document.getElementById("top_boxes");
 	beanmine_check = localStorage.getItem("beanmine_check");
 	chomine_check = localStorage.getItem("chomine_check");
 	queries = JSON.parse(localStorage.getItem("queries"));
@@ -8,8 +9,6 @@ function inti()
 	{
 		document.getElementById("beanmine_tab").style.display = "none";
 		document.getElementsByClassName("beanmine_section")[0].style.display = "none";
-		document.getElementById("chomine_tab").classList += " is-active";
-		document.getElementsByClassName("chomine_section")[0].classList += " is-active";
 	}
 	else
 	{
@@ -21,8 +20,6 @@ function inti()
 	{
 		document.getElementById("chomine_tab").style.display = "none";
 		document.getElementsByClassName("chomine_section")[0].style.display = "none";
-		document.getElementById("beanmine_tab").classList += " is-active";
-		document.getElementsByClassName("beanmine_section")[0].classList += " is-active";
 	}
 	else
 	{
@@ -36,6 +33,7 @@ function inti()
 		document.getElementById(mine+"_title").innerHTML+=queries[queries.length-1] + ' (' + data.totalHits + ')';
 		document.getElementById(mine+"_tab").innerHTML+=' ('+data.totalHits+')';
 		var results = data.results;
+		top_boxes.innerHTML += '<div class="'+mine+'_box" id="top_box"><h4 style="text-transform: uppercase">'+mine+'</h4><ol class="'+mine+'_box_list"></ol></div>';
 		$.each(results, function (k, v) {
 			
 			if(v.relevance==undefined)
@@ -53,8 +51,8 @@ function inti()
 						if(v.fields.name==undefined)
 						{
 							name = v.fields.experimentTraitName;
-							if(name==undefined)
-								name="";
+							if(v.fields.experimentTraitName==undefined)
+								name="Name not available";
 						}
 					}
 				}
@@ -62,6 +60,11 @@ function inti()
 			else
 				name = v.fields['organism.name'];
 			
+			if(k<3)
+			{
+				document.getElementsByClassName(mine+"_box_list")[0].innerHTML += '<li>'+name+' <strong>('+v.type+')</strong>'+'</li>';
+			}
+
 			var details ="";
 			for(var key in v.fields) {
 				details += '<ul style="padding: 0; margin: 0">';
